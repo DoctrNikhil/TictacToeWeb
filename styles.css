@@ -1,0 +1,43 @@
+:root{
+    --width:36vw;
+    --width-elem:12vw;
+}
+body{
+    margin:0px;
+}
+.player{
+    background-color: yellow;
+    text-align: center;
+    font-size: 3rem;
+    margin:0px;
+    padding: 0px;
+}
+ 
+.gameWindow {
+    background: #FFFF00;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: red;
+    display: flex;
+    flex-flow: row wrap;
+    width: var(--width);
+    height:var(--width);
+    padding:0px ;
+    margin:0px;
+}
+
+.element{
+    box-sizing: border-box;
+    display: flex;
+    margin:0px;
+    padding:0px;
+    width: var(--width-elem);
+    height: var(--width-elem);
+    background-color: green;
+    font-size: var(--width-elem);
+    align-items: center;
+    justify-content: space-around;
+    border: 5px solid black;
+}
