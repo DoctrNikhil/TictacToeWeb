@@ -2,6 +2,7 @@ var playerTurn = document.querySelector(".playerTurn").innerHTML;
 var text = "O";
 
 var i = 0;
+let blocksFilled = 0;
 for(i = 0; i < 9; i++)
 {
     document.querySelector(".element"+i).addEventListener("click",function(event)
@@ -16,7 +17,8 @@ for(i = 0; i < 9; i++)
         
         
         if(this.innerHTML != "O" && this.innerHTML != "X")
-        {
+        {   
+            blocksFilled ++;
             if(playerTurn == "1") { playerTurn = "2";}
             else {playerTurn = "1";}
             document.querySelector(".playerTurn").innerHTML = playerTurn;
@@ -32,6 +34,13 @@ for(i = 0; i < 9; i++)
                 {
                     alert("Player"+2+" wins");
                 }
+                location.reload();
+           }
+           // Means match draw
+           if (blocksFilled === 9)
+           {
+               alert("Match Draw");
+               location.reload();
            }
            
         }
