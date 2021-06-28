@@ -35,10 +35,9 @@ for(i = 0; i < 9; i++)
                     alert("Player"+2+" wins");
                 }
                 location.reload();
-                return;
+                
            }
-           // Means match draw
-           if (blocksFilled === 9)
+           else if (blocksFilled === 9)
            {
                alert("Match Draw");
                location.reload();
